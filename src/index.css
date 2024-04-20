@@ -264,6 +264,9 @@
 }
 
 .msg {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     overflow: hidden;
     padding: 220px;
     background: radial-gradient(circle, rgba(0, 0, 0, 0.305), rgb(0, 0, 0)), url(./msgBG.png) no-repeat center center/cover fixed;
@@ -274,9 +277,34 @@
     min-height: 100vh;
 }
 
-.msg p {
+.msgTXT p {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: var(--font-novecento-normal);
+}
+
+.nameANIMATION{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.weWILL{
+    position: static;
+}
+.nameANIMATION h1{
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 23px;
+    font-family: var(--font-novecento-normal);
+    margin-right: 20px;
+    position: static;
+}
+
+.nameTYPE {
+    font-size: 23px;
     font-family: var(--font-novecento-normal);
 }
 
@@ -578,6 +606,9 @@
     }
 
     .msg {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         padding: 10px;
         overflow: hidden;
         margin-top: -70px;
@@ -585,16 +616,30 @@
         background-size: 120vh;
         background-position: center;
         background-repeat: no-repeat;
-        text-align: center;
         min-height: 100vh;
     }
 
-    .msg p {
+    .msgTXT p {
         font-weight: bold;
+        text-align: center;
         display: flex;
         justify-content: center;
         font-size: 15px;
         font-family: var(--font-novecento-normal);
+    }
+
+    .weWILL{
+        position: static;
+    }
+
+    .nameANIMATION h1 {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    .nameTYPE {
+        font-family: var(--font-novecento-normal);
+        font-size: 20px;
     }
 
     .footer .logo-footer {

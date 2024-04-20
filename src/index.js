@@ -4,6 +4,7 @@ import "./index.css";
 import "./global.css";
 import data from "./data";
 import { useRef } from "react";
+import Typewriter from "typewriter-effect";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -159,15 +160,15 @@ const Background = () => {
         </div>
       </div>
       <div className="image-section" id="Images"></div>
-
       <div className="video-section" id="Video">
-          <video width="1080" height="" controls>
-            <source src="https://res.cloudinary.com/duysea99p/video/upload/v1713461257/FRESHLOOK_2023_Compressed_ioewyh.mp4" type="video/mp4" />
-          </video>
+        <video width="1080" height="" controls>
+          <source
+            src="https://res.cloudinary.com/duysea99p/video/upload/v1713461257/FRESHLOOK_2023_Compressed_ioewyh.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
-
       <div class="fixed-logo"></div>
-
       <Cards
         img={data.pretyush.img}
         name={data.pretyush.naam}
@@ -288,7 +289,6 @@ const Background = () => {
         instaLink={data.kartikeySaini.instaLink}
         gitLink={data.kartikeySaini.gitLink}
       />
-
       <Cards
         img={data.mohitKumar.img}
         name={data.mohitKumar.naam}
@@ -297,7 +297,6 @@ const Background = () => {
         instaLink={data.mohitKumar.instaLink}
         gitLink={data.mohitKumar.gitLink}
       />
-
       <Cards
         img={data.shivaniKawade.img}
         name={data.shivaniKawade.naam}
@@ -306,7 +305,6 @@ const Background = () => {
         instaLink={data.shivaniKawade.instaLink}
         gitLink={data.shivaniKawade.gitLink}
       />
-
       <Cards
         img={data.yajatChaudhary.img}
         name={data.yajatChaudhary.naam}
@@ -315,7 +313,6 @@ const Background = () => {
         instaLink={data.yajatChaudhary.instaLink}
         gitLink={data.yajatChaudhary.gitLink}
       />
-
       <Cards
         img={data.kaushikGeyyer.img}
         name={data.kaushikGeyyer.naam}
@@ -324,7 +321,6 @@ const Background = () => {
         instaLink={data.kaushikGeyyer.instaLink}
         gitLink={data.kaushikGeyyer.gitLink}
       />
-
       <Cards
         img={data.anirudhThakur.img}
         name={data.anirudhThakur.naam}
@@ -407,17 +403,35 @@ const Cards = (props) => {
 };
 
 const Msg = () => {
+  const names = Object.values(data).map((item) => item.naam);
   return (
     <>
       <div className="gap"></div>
       <div className="msgparent">
         <div className="msg">
-          <p>
-            "Seniors, as you journey towards new horizons, know that your
-            presence will be deeply missed. Your legacy of excellence and
-            camaraderie will forever inspire us. Farewell, and may your futures
-            be filled with boundless success and joy."
-          </p>
+          <div className="msgTXT">
+            <p>
+              "Seniors, as you journey towards new horizons, know that your
+              presence will be deeply missed. Your legacy of excellence and
+              camaraderie will forever inspire us. Farewell, and may your
+              futures be filled with boundless success and joy."
+            </p>
+          </div>
+          <br />
+          <div className="nameANIMATION">
+            <div className="weWILL">
+              <h1>WE WILL MISS YOU</h1>
+            </div>
+            <div className="nameTYPE">
+              <Typewriter
+                options={{
+                  strings: names,
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </>

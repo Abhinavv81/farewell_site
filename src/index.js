@@ -72,7 +72,7 @@ const Nav = () => {
           </li>
           <li>
             <a href="#Characters" onClick={() => scrollToSection("Characters")}>
-            Memorable Faces
+              Memorable Faces
             </a>
           </li>
           <li>
@@ -158,12 +158,12 @@ const Background = () => {
           </span>
         </div>
       </div>
-      <div className="image-section" id="Images">
-
-      </div>
+      <div className="image-section" id="Images"></div>
 
       <div className="video-section" id="Video">
-        
+          <video width="1080" height="" controls>
+            <source src="https://res.cloudinary.com/duysea99p/video/upload/v1713461257/FRESHLOOK_2023_Compressed_ioewyh.mp4" type="video/mp4" />
+          </video>
       </div>
 
       <div class="fixed-logo"></div>

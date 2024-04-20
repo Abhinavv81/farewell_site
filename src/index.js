@@ -62,17 +62,17 @@ const Nav = () => {
         <ul>
           <li>
             <a href="#Images" onClick={() => scrollToSection("Images")}>
-              Images
+              Gallery
             </a>
           </li>
           <li>
             <a href="#Video" onClick={() => scrollToSection("Video")}>
-              Video
+              Video Diary
             </a>
           </li>
           <li>
             <a href="#Characters" onClick={() => scrollToSection("Characters")}>
-              Characters
+            Memorable Faces
             </a>
           </li>
           <li>
@@ -163,6 +163,7 @@ const Background = () => {
       </div>
 
       <div className="video-section" id="Video">
+
       </div>
 
       <div class="fixed-logo"></div>

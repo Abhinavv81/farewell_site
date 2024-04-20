@@ -159,11 +159,11 @@ const Background = () => {
         </div>
       </div>
       <div className="image-section" id="Images">
-        
+
       </div>
 
       <div className="video-section" id="Video">
-
+        
       </div>
 
       <div class="fixed-logo"></div>

@@ -563,7 +563,7 @@
         display: flex;
         justify-content: center;
         overflow: hidden;
-        height: 26vh;
+        height: 30vh;
         background: linear-gradient(to bottom, black, rgb(0, 0, 0));
     }
 

@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    z-index: 10000;
+}
+
+.nav-bar {
+    background: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(35, 30, 30, 0.1);
+    z-index: 10000;
+    font-size: large;
+}
+
+.logo img {
+    height: 55px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 100px;
+}
+
+.links li {
+    display: inline-flex;
+    margin-right: 2vh;
+    padding: 3px;
+}
+
+.links a {
+    font-size: var(--font-size-xl);
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+
+.navbar-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.landing-page {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black), url(bgimg.jpg) no-repeat center center/cover fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+    font-family: var(--font-novecento-normal);
+    flex-direction: column;
+
+
+}
+
+.landing-text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing-text #pixonoids-text {
+    font-size: 110px;
+    font-family: var(--font-cc-ultimatum);
+    text-transform: uppercase;
+    font-weight: bolder;
+
+}
+
+#farewell-text {
+    font-size: 64px;
+    font-weight: bolder;
+    background: url("https://editors.dexerto.com/wp-content/uploads/2022/03/28/F4416EA3-3FCB-4B87-BEBB-C01557093298.jpeg") no-repeat center center/cover fixed;
+    background-clip: text;
+    color: transparent;
+    font-family: var(--font-cc-ultimatum);
+    -webkit-text-stroke: white 0.001px;
+
+
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(to bottom, black, rgb(0, 0, 0));
+
+}
+
+.fade {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), black);
+}
+
+.cardsBg {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  background:#969595;*/
+    background-color: black;
+}
+
+.Cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 100px;
+    transform-style: preserve-3d;
+    /*   background: rgba(52, 52, 52, 0.792);*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.599), rgb(0, 0, 0)), url(./temple-image@2x.png) no-repeat left center/cover fixed;
+
+    color: white;
+    box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+    background-position: center center;
+    min-height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    background-position: center center;
+    transition: all 0.5s ease-in-out;
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+.Cards img {
+    position: absolute;
+    top: -68px;
+    left: 204px;
+    height: 250px;
+    width: 125px;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 19;
+}
+
+
+.content-box {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    transition: all 0.5s ease-in-out;
+    padding: 60px 25px 25px 15px;
+    transform-style: preserve-3d;
+}
+
+.Cards .content-box .card-title {
+    font-family: var(--font-novecento-normal);
+    font-size: var(--font-size-name);
+}
+
+
+ .dept {
+    display: block;
+    font-weight: 500;
+    font-family: var(--font-novecento-normal);
+    font-size: small;
+    margin-top: 15px;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+    width: fit-content;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+}
+
+.Cards .content-box .card-content {
+    padding-top: 15px;
+    font-size: var(--font-size-kuchBaat);
+    font-family: var(--font-novecento-normal);
+    transition: all 0.5s ease-in-out;
+}
+
+
+@media screen and (max-width: 768px) {
+    .logo img {
+        height: 35px;
+        width: 56.43;
+    }
+
+
+    /* nav bar toggle */
+    .links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        top: 60px;
+    }
+
+    .links.show {
+        z-index: 10000;
+        display: block;
+        margin-left: 13.5%;
+        padding: 2.5%;
+        width: 75%;
+        background: rgba(255, 255, 255, 0.61);
+        border-radius: 12px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+
+    }
+
+    .links li {
+        display: block;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .navbar-toggle {
+        display: block;
+        float: right;
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .tog .cross {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tog {
+        display: block;
+    }
+
+    .tog.show {
+        display: none;
+    }
+
+    .cross {
+        display: none;
+    }
+
+    .cross.show {
+        display: block;
+    }
+
+    .wrapper {
+        margin-top: 5.6%;
+        bottom: 0;
+        width: 50%;
+        color: black;
+        font-size: var(--font-size-xs);
+    }
+
+    .landing-text #pixonoids-text {
+        font-size: 60px;
+        font-weight: bolder;
+    }
+
+    .landing-text #farewell-text {
+        font-size: 34.9px;
+        font-weight: bolder;
+    }
+
+    .cardparent {
+        flex-direction: column;
+    }
+
+    .info-card {
+        padding: 5px;
+        width: 100%;
+        height: 50%;
+    }
+    .cardsBg {
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*  background:#969595;*/
+        background-color: black;
+    }
+    
+    .Cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-top: 100px;
+        transform-style: preserve-3d;
+        /*   background: rgba(52, 52, 52, 0.792);*/
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.599), rgb(0, 0, 0)), url(./temple-image@2x.png) no-repeat left center/cover fixed;
+    
+        color: white;
+        box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+        background-position: center center;
+        min-height: 400px;
+        width: 300px;
+        border-radius: 10px;
+        transform-style: preserve-3d;
+        background-position: center center;
+        transition: all 0.5s ease-in-out;
+        margin: 0 auto;
+        margin-top: 64px;
+    }
+    
+    .Cards img {
+        position: absolute;
+        top: -68px;
+        left: 204px;
+        height: 250px;
+        width: 125px;
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 19;
+    }
+    
+    
+    .content-box {
+        height: 100%;
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+        transition: all 0.5s ease-in-out;
+        padding: 60px 25px 25px 15px;
+        transform-style: preserve-3d;
+    }
+    
+    .Cards .content-box .card-title {
+        font-family: var(--font-novecento-normal);
+        font-size: var(--font-size-name);
+    }
+    
+    
+     .dept {
+        display: block;
+        font-weight: 500;
+        font-family: var(--font-novecento-normal);
+        font-size: small;
+        margin-top: 15px;
+        padding: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+        width: fit-content;
+        transition: all 0.5s ease-in-out;
+        background-color: black;
+    }
+    
+    .Cards .content-box .card-content {
+        padding-top: 15px;
+        font-size: var(--font-size-kuchBaat);
+        font-family: var(--font-novecento-normal);
+        transition: all 0.5s ease-in-out;
+    }
+}

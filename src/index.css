@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    z-index: 10000;
+}
+
+.nav-bar {
+    background: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(35, 30, 30, 0.1);
+    z-index: 10000;
+    font-size: large;
+}
+
+.logo img {
+    padding: 5px;
+    height: 47px;
+
+}
+
+.links {
+    padding-top: 10px;
+    display: flex;
+}
+
+.links li {
+    display: inline-flex;
+    margin-right: 2vh;
+    padding: 3px;
+
+}
+
+.links a {
+    font-size: var(--font-size-xl);
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+
+.navbar-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.landing-page {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black), url(bgimg.jpg) no-repeat center center/cover fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+    font-family: var(--font-novecento-normal);
+    flex-direction: column;
+
+
+}
+
+.landing-text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing-text #pixonoids-text {
+    font-size: 110px;
+    font-family: var(--font-cc-ultimatum);
+    text-transform: uppercase;
+    font-weight: bolder;
+
+}
+
+#farewell-text {
+    font-size: 64px;
+    font-family: var(--font-cc-ultimatum);
+    text-transform: uppercase;
+    font-weight: bolder
+}
+
+.image-section {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    background: black no-repeat center /contain ;
+    overflow: hidden;
+    height: 65.75vh;
+    animation: changeImage 10s  infinite;
+}
+
+/* @keyframes changeImage {
+    0% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713299178/heshan-perera-aIJa8dPdzRI-unsplash_qqqmxl.jpg);
+    }
+
+    25% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713299179/andrew-ly-KZ0SZ2fEd20-unsplash_cdk3zu.jpg);
+    }
+
+    50% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713299179/lena-denk-vO_RghTzvxE-unsplash_dqxfzc.jpg);
+    }
+
+    75% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713449371/joshua-woroniecki-eUjT8kweNlg-unsplash_fdt7sc.jpg);
+    }
+
+    100% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713449371/mike-benna-y5q_e7b7LJ0-unsplash_yttfmw.jpg);
+    }
+} */
+
+.video-section {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, black, rgb(0, 0, 0));
+    overflow: hidden;
+    height: 65.75vh;
+}
+
+.cardsBg {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  background:#969595;*/
+    background-color: black;
+}
+
+.Cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 100px;
+    transform-style: preserve-3d;
+    /*   background: rgba(52, 52, 52, 0.792);*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.599), rgb(0, 0, 0)), url(./temple-image@2x.png) no-repeat left center/cover fixed;
+    color: white;
+    box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+    background-position: center center;
+    min-height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    background-position: center center;
+    transition: all 0.5s ease-in-out;
+    margin: 0 auto;
+    margin-top: 75px;
+}
+
+.Cards img {
+    position: absolute;
+    top: -152px;
+    left: 207px;
+    height: 384px;
+    width: 100.7px;
+    border-radius: 37px;
+    padding: 0px;
+    z-index: 0;
+}
+
+.content-box {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    transition: all 0.5s ease-in-out;
+    padding: 60px 25px 25px 15px;
+    transform-style: preserve-3d;
+}
+
+.Cards .content-box .card-title {
+    font-family: var(--font-novecento-normal);
+    font-size: var(--font-size-name);
+}
+
+
+.dept {
+    display: block;
+    font-weight: 500;
+    font-family: var(--font-novecento-normal);
+    font-size: small;
+    margin-top: 15px;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+    width: fit-content;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+}
+
+.Cards .content-box .card-content {
+    padding-top: 15px;
+    font-size: var(--font-size-kuchBaat);
+    font-family: var(--font-novecento-normal);
+    transition: all 0.5s ease-in-out;
+}
+
+.contacts {
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+    width: fit-content;
+    transition: all 0.5s ease-in-out;
+    z-index: 10000000;
+}
+
+.flex {
+    padding-top: 15px;
+    display: flex;
+}
+
+.github {
+    margin-left: 20px;
+}
+
+.msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    color: white;
+    font-size: 30px;
+    font-family: var(--font-novecento-normal);
+}
+
+.gap {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.msgparent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    color: white;
+    font-size: 30px;
+
+}
+
+.msg {
+    overflow: hidden;
+    padding: 220px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.305), rgb(0, 0, 0)), url(./msgBG.png) no-repeat center center/cover fixed;
+    background-size: 160vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.msg p {
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: var(--font-novecento-normal);
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    background: black;
+}
+
+.footer .logo-name {
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer .logo-footer {
+    height: 50px;
+    width: 56.43;
+    margin-top: 10px;
+    animation: rotate 15s linear infinite;
+}
+
+.fixed-logo {
+    height: 47px;
+    width: 47px;
+    padding: 19px;
+    background: url(https://res.cloudinary.com/duysea99p/image/upload/v1712850689/Pixonoids_-_Material_UI_-_Copy_lqfq2s.png) no-repeat center center / cover;
+    position: fixed;
+    margin: 7px;
+    /* right: -2px; */
+    bottom: 10px;
+    z-index: 100;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.footer .club-name {
+    padding-left: 12px;
+    padding-top: 23px;
+    font-family: var(--font-novecento-normal);
+    color: white;
+    height: 35px;
+    width: 56.43;
+    font-size: 22px;
+
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer .links .linkedIN {
+    margin-left: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .logo img {
+        height: 35px;
+        width: 56.43;
+    }
+
+    /* nav bar toggle */
+    .nav-bar .links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        top: 60px;
+    }
+
+    .links.show {
+        z-index: 10000;
+        display: block;
+        margin-right: 13.5%;
+        padding: 2.5%;
+        width: 74%;
+        background: rgba(255, 255, 255, 0.09);
+        border-radius: 12px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0px);
+
+    }
+
+    .links li {
+        display: block;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .navbar-toggle {
+        display: block;
+        float: right;
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .links a {
+        font-size: var(--font-size-xl);
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .tog .cross {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tog {
+        display: block;
+    }
+
+    .tog.show {
+        display: none;
+    }
+
+    .cross {
+        display: none;
+    }
+
+    .cross.show {
+        display: block;
+    }
+
+    .wrapper {
+        margin-top: 5.6%;
+        bottom: 0;
+        width: 50%;
+        color: white;
+        font-size: var(--font-size-xs);
+    }
+
+    .landing-text #pixonoids-text {
+        font-size: 60px;
+        font-weight: bolder;
+    }
+
+    .landing-text #farewell-text {
+        font-size: 34.9px;
+        font-weight: bolder;
+    }
+
+    .cardparent {
+        flex-direction: column;
+    }
+
+    .info-card {
+        padding: 5px;
+        width: 100%;
+        height: 50%;
+    }
+
+    .cardsBg {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*  background:#969595;*/
+        background-color: black;
+    }
+
+    .Cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-top: 100px;
+        transform-style: preserve-3d;
+        /*   background: rgba(52, 52, 52, 0.792);*/
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.599), rgb(0, 0, 0)), url(./temple-image@2x.png) no-repeat left center/cover fixed;
+        color: white;
+        box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+        background-position: center center;
+        min-height: 400px;
+        width: 300px;
+        border-radius: 10px;
+        transform-style: preserve-3d;
+        background-position: center center;
+        transition: all 0.5s ease-in-out;
+        margin: 0 auto;
+        margin-top: 64px;
+    }
+
+    .Cards img {
+        position: absolute;
+        top: -152px;
+        left: 207px;
+        height: 384px;
+        width: 100.7px;
+        border-radius: 37px;
+        padding: 0px;
+        z-index: 0;
+    }
+
+
+    .content-box {
+        height: 100%;
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+        transition: all 0.5s ease-in-out;
+        padding: 60px 25px 25px 15px;
+        transform-style: preserve-3d;
+    }
+
+    .Cards .content-box .card-title {
+        font-family: var(--font-novecento-normal);
+        font-size: var(--font-size-name);
+    }
+
+
+    .dept {
+        display: block;
+        font-weight: 500;
+        font-family: var(--font-novecento-normal);
+        font-size: small;
+        margin-top: 15px;
+        padding: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+        width: fit-content;
+        transition: all 0.5s ease-in-out;
+        background-color: black;
+    }
+
+    .Cards .content-box .card-content {
+        padding-top: 15px;
+        font-size: var(--font-size-kuchBaat);
+        font-family: var(--font-novecento-normal);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .image-section {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        background: black no-repeat center /contain ;
+        overflow: hidden;
+        height: 26vh;
+        animation: changeImage 10s  infinite;
+    }
+
+    /* @keyframes changeImage {
+        0% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713299178/heshan-perera-aIJa8dPdzRI-unsplash_qqqmxl.jpg);
+        }
+
+        25% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713299179/andrew-ly-KZ0SZ2fEd20-unsplash_cdk3zu.jpg);
+        }
+
+        50% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713299179/lena-denk-vO_RghTzvxE-unsplash_dqxfzc.jpg);
+        }
+
+        75% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713449371/joshua-woroniecki-eUjT8kweNlg-unsplash_fdt7sc.jpg);
+        }
+
+        100% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713449371/mike-benna-y5q_e7b7LJ0-unsplash_yttfmw.jpg);
+        }
+    } */
+
+
+    .video-section {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        height: 26vh;
+        background: linear-gradient(to bottom, black, rgb(0, 0, 0));
+    }
+
+    .msgparent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        height: 100vh;
+        color: white;
+        font-size: 30px;
+
+    }
+
+    .msg {
+        padding: 10px;
+        overflow: hidden;
+        margin-top: -70px;
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.305), rgb(0, 0, 0)), url(./msgBG.png) no-repeat center center/cover fixed;
+        background-size: 120vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        min-height: 100vh;
+    }
+
+    .msg p {
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+        font-family: var(--font-novecento-normal);
+    }
+
+    .footer .logo-footer {
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .footer .club-name {
+        padding-left: 12px;
+        padding-top: 19px;
+        font-family: var(--font-novecento-normal);
+        color: white;
+        height: 35px;
+        width: 56.43;
+        font-size: 19px;
+
+    }
+
+    .footer .links {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .fixed-logo {
+        height: 30px;
+        width: 30px;
+        padding: 19px;
+        background: url(https://res.cloudinary.com/duysea99p/image/upload/v1712850689/Pixonoids_-_Material_UI_-_Copy_lqfq2s.png) no-repeat center center / cover;
+        position: fixed;
+        margin: 7px;
+        /* right: -2px; */
+        bottom: 10px;
+        z-index: 100;
+        animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

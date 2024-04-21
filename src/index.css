@@ -130,46 +130,50 @@
 }
 
 .cardsBg {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /*  background:#969595;*/
+    justify-content: space-between;
+    align-items:center;
     background-color: black;
 }
 
+.chrImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 700px;
+    width: 350px;
+    background: black url(https://res.cloudinary.com/duysea99p/image/upload/v1712826774/yajat_sir_-removebg-preview_yz826r.png) no-repeat center center/contain;
+    /* box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px; */
+    border-radius: 20px;
+    margin-right: 275px;
+    margin-bottom: 100px;
+}
 .Cards {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 50px;
     transform-style: preserve-3d;
-    /*   background: rgba(52, 52, 52, 0.792);*/
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.599), rgb(0, 0, 0)), url(./temple-image@2x.png) no-repeat left center/cover fixed;
     color: white;
     box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
     background-position: center center;
     min-height: 400px;
-    width: 300px;
+    width: 350px;
     border-radius: 10px;
     transform-style: preserve-3d;
     background-position: center center;
     transition: all 0.5s ease-in-out;
-    margin: 0 auto;
-    margin-top: 75px;
+    margin-left: 150px;
 }
 
 .Cards img {
-    position: absolute;
-    top: -152px;
-    left: 207px;
-    height: 384px;
-    width: 100.7px;
-    border-radius: 37px;
-    padding: 0px;
-    z-index: 0;
+    height: 0px;
 }
 
 .content-box {
@@ -290,22 +294,19 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    font-family: var(--font-novecento-normal);
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 .weWILL{
     position: static;
+    
 }
-.nameANIMATION h1{
-    font-weight: bolder;
-    font-size: 23px;
-    font-family: var(--font-novecento-normal);
-    margin-right: 20px;
-    position: static;
-}
-
-.nameTYPE {
-    font-size: 23px;
-    font-family: var(--font-novecento-normal);
+.nameTYPE{
+    margin-bottom: 2px;
+    margin-left: 25px;
+    color: black;
 }
 
 .footer {
@@ -334,6 +335,7 @@
     background: url(https://res.cloudinary.com/duysea99p/image/upload/v1712850689/Pixonoids_-_Material_UI_-_Copy_lqfq2s.png) no-repeat center center / cover;
     position: fixed;
     margin: 7px;
+    margin-left:30px ;
     bottom: 10px;
     z-index: 100;
     animation: rotate 20s linear infinite;
@@ -363,11 +365,20 @@
 .footer .links {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    margin-left: -25px;
+    padding: 30px;
+}
+
+.footer .links .github {
+    padding-left: 35px;
+}
+
+.footer .links .insta {
+    padding-left: 35px;
 }
 
 .footer .links .linkedIN {
-    margin-left: 15px;
+    padding-left: 55px;
 }
 
 
@@ -628,18 +639,25 @@
         font-family: var(--font-novecento-normal);
     }
 
+    .nameANIMATION{
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        font-family: var(--font-novecento-normal);
+        font-weight: bolder;
+    }
+    
     .weWILL{
         position: static;
+        font-size: 15px;
+        
     }
-
-    .nameANIMATION h1 {
-        font-size: 20px;
-        margin-right: 20px;
-    }
-
-    .nameTYPE {
-        font-family: var(--font-novecento-normal);
-        font-size: 20px;
+    .nameTYPE{
+        margin-bottom: 2px;
+        margin-left: 25px;
+        color: black;
+        font-size: 15px;
     }
 
     .footer .logo-footer {

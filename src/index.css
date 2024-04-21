@@ -306,7 +306,7 @@
 .nameTYPE{
     margin-bottom: 2px;
     margin-left: 25px;
-    color: whitesmoke;
+    color: black;
 }
 
 .footer {
@@ -638,19 +638,17 @@
         flex-direction: row;
         font-family: var(--font-novecento-normal);
         font-weight: bold;
-        font-size: 20px;
+        font-size: 15px;
     }
     
     .weWILL{
         position: static;
-        font-size:20px;
         
     }
     .nameTYPE{
         margin-bottom: 2px;
         margin-left: 25px;
         color: black;
-        font-size:20px;
     }
 
     .footer .logo-footer {

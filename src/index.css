@@ -364,7 +364,7 @@
 
 .footer .links {
     display: flex;
-    justify-content: center;e
+    justify-content: center;
     padding: 30px;
 }
 
@@ -679,6 +679,7 @@
         background: url(https://res.cloudinary.com/duysea99p/image/upload/v1712850689/Pixonoids_-_Material_UI_-_Copy_lqfq2s.png) no-repeat center center / cover;
         position: fixed;
         margin: 7px;
+        /* right: -2px; */
         bottom: 10px;
         z-index: 100;
         animation: rotate 20s linear infinite;

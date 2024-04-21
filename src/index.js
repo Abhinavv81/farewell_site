@@ -366,14 +366,14 @@ const Cards = (props) => {
       opacity: 0,
       x: -100,
       y: 50,
-      scale: 0.5,
-      duration: 2,
+      scale: 0.1,
+      duration: 5,
       ease: "power3.out",
       scrollTrigger: {
         trigger: chrImg,
-        start: "top 80%", 
-        end: "top 50%", 
-        scrub: true, 
+        start: "top 80%",
+        end: "top 50%",
+        scrub: true,
       },
     });
   }, []);
@@ -498,9 +498,7 @@ const Msg = () => {
           </div>
           <br />
           <div className="nameANIMATION">
-            <div className="weWILL">
-             WE  WILL  MISS  YOU
-            </div>
+            <div className="weWILL">WE WILL MISS YOU</div>
             <div className="nameTYPE">
               <Typewriter
                 options={{

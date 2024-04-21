@@ -148,7 +148,7 @@
     background: black url(https://res.cloudinary.com/duysea99p/image/upload/v1712826774/yajat_sir_-removebg-preview_yz826r.png) no-repeat center center/contain;
     /* box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px; */
     border-radius: 20px;
-    margin-right: 275px;
+    margin-right: 75px;
     margin-bottom: 100px;
 }
 .Cards {
@@ -295,8 +295,8 @@
     justify-content: space-between;
     flex-direction: row;
     font-family: var(--font-novecento-normal);
-    font-size: 30px;
-    font-weight: bolder;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .weWILL{
@@ -306,7 +306,7 @@
 .nameTYPE{
     margin-bottom: 2px;
     margin-left: 25px;
-    color: black;
+    color: whitesmoke;
 }
 
 .footer {
@@ -369,16 +369,8 @@
     padding: 30px;
 }
 
-.footer .links .github {
-    padding-left: 35px;
-}
-
-.footer .links .insta {
-    padding-left: 35px;
-}
-
 .footer .links .linkedIN {
-    padding-left: 55px;
+    padding-left: 20px;
 }
 
 
@@ -645,19 +637,20 @@
         justify-content: space-between;
         flex-direction: row;
         font-family: var(--font-novecento-normal);
-        font-weight: bolder;
+        font-weight: bold;
+        font-size: 20px;
     }
     
     .weWILL{
         position: static;
-        font-size: 15px;
+        font-size:20px;
         
     }
     .nameTYPE{
         margin-bottom: 2px;
         margin-left: 25px;
         color: black;
-        font-size: 15px;
+        font-size:20px;
     }
 
     .footer .logo-footer {

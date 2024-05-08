@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDom from "react-dom";
 import "./index.css";
 import "./global.css";
@@ -19,18 +19,15 @@ function Main() {
 }
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     const toggleButton = document.querySelector(".navbar-toggle");
     const navbarLinks = document.querySelector(".links");
-    const toggle = document.querySelector(".navbar-toggle");
-    const tog = document.querySelector(".tog");
-    const cross = document.querySelector(".cross");
 
     const handleClick = () => {
       navbarLinks.classList.toggle("show");
-      toggle.classList.toggle("show");
-      tog.classList.toggle("show");
-      cross.classList.toggle("show");
+      setIsOpen(!isOpen); // Toggle isOpen state
     };
 
     toggleButton.addEventListener("click", handleClick);
@@ -38,28 +35,23 @@ const Nav = () => {
     return () => {
       toggleButton.removeEventListener("click", handleClick);
     };
-  }, []);
+  }, [isOpen]);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({
-        behavior: "",
+        behavior: "smooth", // Use smooth scroll
         block: "start",
         inline: "nearest",
-        duration: 1000,
       });
     }
+    // Close the navbar after clicking a link
+    setIsOpen(false);
   };
 
   return (
-    <nav className="nav-bar">
-      {/* <div className="logo">
-        <img
-          src="https://res.cloudinary.com/duysea99p/image/upload/v1712850689/Pixonoids_-_Material_UI_-_Copy_lqfq2s.png"
-          alt="Pixonoids Logo"
-        />
-      </div> */}
+    <nav className={`nav-bar ${isOpen ? 'open' : ''}`}>
       <div className="links">
         <ul>
           <li>
@@ -86,39 +78,39 @@ const Nav = () => {
         </ul>
       </div>
 
-      <div class="navbar-toggle">
-        <div class="tog">
+      <div className="navbar-toggle">
+        <div className="tog">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             width="30"
             height="30"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="white"
-            class="w-6 h-6"
+            className="w-6 h-6"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
             />
           </svg>
         </div>
-        <div class="cross">
+        <div className="cross">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             width="30"
             height="30"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="white"
-            class="w-6 h-6"
+            className="w-6 h-6"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M6 18 18 6M6 6l12 12"
             />
           </svg>
@@ -127,6 +119,7 @@ const Nav = () => {
     </nav>
   );
 };
+
 const Background = () => {
   const heading = useRef(null);
   const subheading = useRef(null);

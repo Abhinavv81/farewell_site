@@ -67,7 +67,7 @@
     background-color: #272822;
     background-image: linear-gradient(170deg, #272822 10%, #e63434b1 74%);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
 }
 
@@ -95,6 +95,7 @@
 
 .modal-pixo>.header-pixo {
     font-family: var(--font-cc-ultimatum);
+    color:aliceblue;
     width: 100%;
     font-size: 50px;
     text-align: center;
@@ -103,6 +104,7 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    margin-left: -55px;
 }
 
 .header-pixo >.pixo-img{
@@ -156,7 +158,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    padding-right: 5px;
+    margin-right: 15px;
     padding-top: 5px;
 }
 
@@ -840,5 +842,142 @@
         to {
             transform: rotate(360deg);
         }
+    }
+
+
+    .modal-theme{
+        height: 150px;
+        background-color: #272822;
+        background-image: linear-gradient(170deg, #272822 10%, #e63434b1 74%);
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .modal-pixo{
+        height: 150px;
+        background-color: #272822;
+        background-image: linear-gradient(170deg, #272822 10%, #e63434b1 74%);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .button-theme {
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        font-family: var(--font-novecento-normal);
+        background: transparent;
+        font-size: large;
+        font-weight: bolder;
+        text-align: center;
+        border: none;
+    
+    }
+    
+    .modal-theme>.header-theme {
+        font-family: var(--font-cc-ultimatum);
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+        font-weight: 400;
+        border-bottom: 1px solid black;
+    }
+    
+    .modal-pixo>.header-pixo {
+        font-family: var(--font-cc-ultimatum);
+        color:aliceblue;
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -25px;
+    }
+    
+    .header-pixo >.pixo-img{
+        height: 50px;
+        width: 25px;
+        background: black no-repeat center /contain;
+        overflow: hidden;
+        animation: pixo-changeImage 10s infinite;
+        margin-bottom: 5px;
+    }
+    
+    @keyframes pixo-changeImage {
+        0% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433374/367996939_207937178924399_2885094949970343017_n_t17pk5.jpg);
+        }
+    
+        25% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433374/337750926_795280374776471_7380077801040000389_n_d5d9oq.jpg);
+        }
+    
+        50% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433374/376011026_855964046045917_3747617966464338871_n_aiz3pk.jpg);
+        }
+    
+        75% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433374/353824943_275813008251518_4736197242434317902_n_ygyvoy.jpg);
+        }
+    
+        100% {
+            background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433373/326444542_860609318556444_3290435243880202536_n_qmchu6.jpg);
+        }
+    }
+    
+    .modal-theme>.content-theme{
+        font-family: var(--font-novecento-normal);
+        width: 100%;
+        font-size: 5px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        padding-right: 2.5px;
+        padding-top: 5px;
+        display: flex;
+        justify-content: center;
+    }
+    .modal-pixo>.content-pixo{
+        font-family: var(--font-novecento-normal);
+        width: 100%;
+        font-size: 5px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-right:5px;
+        padding-top: 5px;
+    }
+    
+    .modal-theme>.close {
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        padding: 2px 5px;
+        line-height: 20px;
+        right: -10px;
+        top: -10px;
+        font-size: 24px;
+        background: black;
+        border: 1px solid #cfcece;
+    }
+    
+    .modal-pixo>.close {
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        padding: 2px 5px;
+        line-height: 20px;
+        right: -10px;
+        top: -10px;
+        font-size: 24px;
+        background: black;
+        border: 1px solid #cfcece;
     }
 }

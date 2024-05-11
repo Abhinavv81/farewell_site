@@ -25,7 +25,7 @@ const Nav = () => {
 
   useEffect(() => {
     const toggleButton = document.querySelector(".navbar-toggle");
-    const navbarLinks = document.querySelector(".links");
+    const navbarLinks = document.querySelector(".links",".button-theme","button-pixo");
 
     const handleClick = () => {
       navbarLinks.classList.toggle("show");
@@ -51,10 +51,15 @@ const Nav = () => {
   };
 
   const handleLinkClick = () => {
-    const navbarLinks = document.querySelector(".links");
+    const navbarLinks = document.querySelector(".links", ".button-theme",".button-pixo");
     navbarLinks.classList.remove("show");
     setIsOpen(false);
   };
+  // const handlebuttonClick = () => {
+  //   const navbarbutton = document.querySelector(".button-theme");
+  //   navbarbutton.classList.remove("show");
+  //   setIsOpen(false);
+  // };
 
   return (
     <nav className="nav-bar">
@@ -94,36 +99,41 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <Popup
-              trigger={<button className="button-theme">Theme</button>}
-              modal
+            <a
+              href="#theme"
+              onClick={() => {
+                handleLinkClick();
+              }}
             >
-              {(close) => (
-                <div className="modal-theme">
-                  <button className="close" onClick={close}>
-                    &times;
-                  </button>
-                  <div className="header-theme">
-                    TEKKEN
-                  </div>
+              <Popup
+                trigger={<button className="button-theme">Theme</button>}
+                modal
+              >
+                {(close) => (
+                  <div className="modal-theme">
+                    <button className="close" onClick={close}>
+                      &times;
+                    </button>
+                    <div className="header-theme">TEKKEN</div>
 
-                  <div className="content-theme">
-                    Tekken is a Japanese fighting game franchise that includes
-                    film and print adaptations. The name translates to "Iron
-                    Fist".
-                    <br />
-                    <br />
-                    To our Tekken Masters 🥋, as you prepare to exit the arena,
-                    know that your presence will be sorely missed. The dojo
-                    won't be the same without your fierce determination and
-                    unwavering spirit. Remember, just like in Tekken, every
-                    challenge is an opportunity to grow stronger. Farewell, and
-                    may your future endeavors be as electrifying as a perfect
-                    Electric Wind God Fist!
+                    <div className="content-theme">
+                      Tekken is a Japanese fighting game franchise that includes
+                      film and print adaptations. The name translates to "Iron
+                      Fist".
+                      <br />
+                      <br />
+                      To our Tekken Masters 🥋, as you prepare to exit the
+                      arena, know that your presence will be sorely missed. The
+                      dojo won't be the same without your fierce determination
+                      and unwavering spirit. Remember, just like in Tekken,
+                      every challenge is an opportunity to grow stronger.
+                      Farewell, and may your future endeavors be as electrifying
+                      as a perfect Electric Wind God Fist!
+                    </div>
                   </div>
-                </div>
-              )}
-            </Popup>
+                )}
+              </Popup>
+            </a>
           </li>
           <li>
             <Popup

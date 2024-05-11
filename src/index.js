@@ -19,7 +19,7 @@ function Main() {
 }
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
     const toggleButton = document.querySelector(".navbar-toggle");
@@ -35,7 +35,7 @@ const Nav = () => {
     return () => {
       toggleButton.removeEventListener("click", handleClick);
     };
-  }, [isOpen]);
+  });
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -46,8 +46,12 @@ const Nav = () => {
         inline: "nearest",
       });
     }
-    // Close the navbar ater clicking a link
-    setIsOpen(false);
+  };
+
+  const handleLinkClick = () => {
+    const navbarLinks = document.querySelector(".links");
+    navbarLinks.classList.remove("show");
+    setIsOpen(false); // Close the menu by setting isOpen to false
   };
 
   return (
@@ -55,17 +59,17 @@ const Nav = () => {
       <div className="links">
         <ul>
           <li>
-            <a href="#Images" onClick={() => scrollToSection("Images")}>
+            <a href="#Images" onClick={() => { handleLinkClick(); scrollToSection("Images"); }}>
               Gallery
             </a>
           </li>
           <li>
-            <a href="#Video" onClick={() => scrollToSection("Video")}>
+            <a href="#Video" onClick={() => { handleLinkClick(); scrollToSection("video"); }}>
               Video Diary
             </a>
           </li>
           <li>
-            <a href="#Characters" onClick={() => scrollToSection("Characters")}>
+            <a href="#Characters" onClick={() => { handleLinkClick(); scrollToSection("characters"); }}>
               Memorable Faces
             </a>
           </li>

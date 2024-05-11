@@ -413,6 +413,7 @@
     }
 
     .navbar-toggle {
+        margin:10px;
         display: block;
         float: right;
         width: 30px;

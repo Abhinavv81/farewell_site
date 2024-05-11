@@ -120,7 +120,10 @@
         background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713449371/mike-benna-y5q_e7b7LJ0-unsplash_yttfmw.jpg);
     }
 }
-
+.gap-btw-vid-img{
+    height: 50px;
+    background-color: black;
+}
 .video-section {
     padding-top: 51px;
     display: flex;

@@ -154,8 +154,14 @@ const Background = () => {
         </div>
       </div>
       <div className="image-section" id="Images"></div>
+      <div className="gap-btw-vid-img"></div>
       <div className="video-section" id="Video">
-        <video width="1080" height="" controls>
+        <video
+          width="1080"
+          height=""
+          controls
+          poster="https://res.cloudinary.com/duysea99p/image/upload/v1715412116/3Xd9GsEyvcg-HD_k2zmlp.jpg"
+        >
           <source
             src="https://res.cloudinary.com/duysea99p/video/upload/v1713461257/FRESHLOOK_2023_Compressed_ioewyh.mp4"
             type="video/mp4"

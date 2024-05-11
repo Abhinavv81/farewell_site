@@ -55,7 +55,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className={`nav-bar ${isOpen ? "open" : ""}`}>
+    <nav className="nav-bar">
       <div className="links">
         <ul>
           <li>

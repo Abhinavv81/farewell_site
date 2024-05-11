@@ -25,7 +25,11 @@ const Nav = () => {
 
   useEffect(() => {
     const toggleButton = document.querySelector(".navbar-toggle");
-    const navbarLinks = document.querySelector(".links",".button-theme","button-pixo");
+    const navbarLinks = document.querySelector(
+      ".links",
+      ".button-theme",
+      "button-pixo"
+    );
 
     const handleClick = () => {
       navbarLinks.classList.toggle("show");
@@ -51,10 +55,18 @@ const Nav = () => {
   };
 
   const handleLinkClick = () => {
-    const navbarLinks = document.querySelector(".links", ".button-theme",".button-pixo");
+    const navbarLinks = document.querySelector(
+      ".links",
+      ".button-theme",
+      ".button-pixo"
+    );
     navbarLinks.classList.remove("show");
     setIsOpen(false);
   };
+
+  const isDesktopOrLaptop = useMediaQuery({ minWidth: 769 });
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 768 });
+
   // const handlebuttonClick = () => {
   //   const navbarbutton = document.querySelector(".button-theme");
   //   navbarbutton.classList.remove("show");
@@ -136,39 +148,80 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <Popup
-              trigger={<button className="button-theme">Pixonoids</button>}
-              modal
-            >
-              {(close) => (
-                <div className="modal-pixo">
-                  <button className="close" onClick={close}>
-                    &times;
-                  </button>
-                  <div className="header-pixo">
-                    PIXONOIDS
-                    <div className="pixo-img"></div>
-                  </div>
-                  <div className="content-pixo">
-                    <p>
-                      The Official Photography , Animation , Graphic Designing ,
-                      Video Editing and Web Development Club of National
-                      Institute Of Technology Hamirpur
-                      <br />
-                      <br />
-                      "Art is that form of unique expression which traverses the
-                      boundaries of inner aspirations and ethereal world." From
-                      rustling leaves to pastel hues, bustling crowds to silent
-                      rooms, we at PIXONOIDS capture it all. PIXONOIDS is the
-                      core club of NIT-H, which is responsible for documentation
-                      of college events and fests, designing posters, making
-                      short films, and conceiving the official websites for our
-                      college fests.
-                    </p>
-                  </div>
-                </div>
+            <>
+              {isDesktopOrLaptop && (
+                <Popup
+                  trigger={<button className="button-theme">Pixonoids</button>}
+                  modal
+                >
+                  {(close) => (
+                    <div className="modal-pixo">
+                      <button className="close" onClick={close}>
+                        &times;
+                      </button>
+                      <div className="header-pixo">
+                        PIXONOIDS
+                        <div className="pixo-img"></div>
+                      </div>
+                      <div className="content-pixo">
+                        <p>
+                          The Official Photography , Animation , Graphic
+                          Designing , Video Editing and Web Development Club of
+                          National Institute Of Technology Hamirpur
+                          <br />
+                          <br />
+                          "Art is that form of unique expression which traverses
+                          the boundaries of inner aspirations and ethereal
+                          world." From rustling leaves to pastel hues, bustling
+                          crowds to silent rooms, we at PIXONOIDS capture it
+                          all. PIXONOIDS is the core club of NIT-H, which is
+                          responsible for documentation of college events and
+                          fests, designing posters, making short films, and
+                          conceiving the official websites for our college
+                          fests.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </Popup>
               )}
-            </Popup>
+              {isTabletOrMobile && (
+                <Popup
+                trigger={<button className="button-theme">Pixonoids</button>}
+                modal
+              >
+                {(close) => (
+                  <div className="modal-pixo">
+                    <button className="close" onClick={close}>
+                      &times;
+                    </button>
+                    <div className="header-pixotab">
+                      PIXONOIDS
+                    </div>
+                    <div className="content-pixotab">
+                      <p>
+                        The Official Photography , Animation , Graphic
+                        Designing , Video Editing and Web Development Club of
+                        National Institute Of Technology Hamirpur
+                        <br />
+                        <br />
+                        "Art is that form of unique expression which traverses
+                        the boundaries of inner aspirations and ethereal
+                        world." From rustling leaves to pastel hues, bustling
+                        crowds to silent rooms, we at PIXONOIDS capture it
+                        all. PIXONOIDS is the core club of NIT-H, which is
+                        responsible for documentation of college events and
+                        fests, designing posters, making short films, and
+                        conceiving the official websites for our college
+                        fests.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </Popup>
+
+              )}
+            </>
           </li>
         </ul>
       </div>

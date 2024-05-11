@@ -6,6 +6,8 @@ import data from "./data";
 import { useMediaQuery } from "react-responsive";
 import { useRef } from "react";
 import Typewriter from "typewriter-effect";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -51,7 +53,7 @@ const Nav = () => {
   const handleLinkClick = () => {
     const navbarLinks = document.querySelector(".links");
     navbarLinks.classList.remove("show");
-    setIsOpen(false); // Close the menu by setting isOpen to false
+    setIsOpen(false);
   };
 
   return (
@@ -59,25 +61,104 @@ const Nav = () => {
       <div className="links">
         <ul>
           <li>
-            <a href="#Images" onClick={() => { handleLinkClick(); scrollToSection("Images"); }}>
+            <a
+              href="#Images"
+              onClick={() => {
+                handleLinkClick();
+                scrollToSection("Images");
+              }}
+            >
               Gallery
             </a>
           </li>
           <li>
-            <a href="#Video" onClick={() => { handleLinkClick(); scrollToSection("video"); }}>
+            <a
+              href="#Video"
+              onClick={() => {
+                handleLinkClick();
+                scrollToSection("video");
+              }}
+            >
               Video Diary
             </a>
           </li>
           <li>
-            <a href="#Characters" onClick={() => { handleLinkClick(); scrollToSection("characters"); }}>
+            <a
+              href="#Characters"
+              onClick={() => {
+                handleLinkClick();
+                scrollToSection("characters");
+              }}
+            >
               Memorable Faces
             </a>
           </li>
           <li>
-            <a href="#Theme">Theme</a>
+            <Popup
+              trigger={<button className="button-theme">Theme</button>}
+              modal
+            >
+              {(close) => (
+                <div className="modal-theme">
+                  <button className="close" onClick={close}>
+                    &times;
+                  </button>
+                  <div className="header-theme">
+                    TEKKEN
+                  </div>
+
+                  <div className="content-theme">
+                    Tekken is a Japanese fighting game franchise that includes
+                    film and print adaptations. The name translates to "Iron
+                    Fist".
+                    <br />
+                    <br />
+                    To our Tekken Masters 🥋, as you prepare to exit the arena,
+                    know that your presence will be sorely missed. The dojo
+                    won't be the same without your fierce determination and
+                    unwavering spirit. Remember, just like in Tekken, every
+                    challenge is an opportunity to grow stronger. Farewell, and
+                    may your future endeavors be as electrifying as a perfect
+                    Electric Wind God Fist!
+                  </div>
+                </div>
+              )}
+            </Popup>
           </li>
           <li>
-            <a href="#Pixonoids">PIXONOIDS</a>
+            <Popup
+              trigger={<button className="button-theme">Pixonoids</button>}
+              modal
+            >
+              {(close) => (
+                <div className="modal-pixo">
+                  <button className="close" onClick={close}>
+                    &times;
+                  </button>
+                  <div className="header-pixo">
+                    PIXONOIDS
+                    <div className="pixo-img"></div>
+                  </div>
+                  <div className="content-pixo">
+                    <p>
+                      The Official Photography , Animation , Graphic Designing ,
+                      Video Editing and Web Development Club of National
+                      Institute Of Technology Hamirpur
+                      <br />
+                      <br />
+                      "Art is that form of unique expression which traverses the
+                      boundaries of inner aspirations and ethereal world." From
+                      rustling leaves to pastel hues, bustling crowds to silent
+                      rooms, we at PIXONOIDS capture it all. PIXONOIDS is the
+                      core club of NIT-H, which is responsible for documentation
+                      of college events and fests, designing posters, making
+                      short films, and conceiving the official websites for our
+                      college fests.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </Popup>
           </li>
         </ul>
       </div>

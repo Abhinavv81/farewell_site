@@ -53,6 +53,141 @@
     cursor: pointer;
 }
 
+
+.modal-theme{
+    height: 300px;
+    background-color: #272822;
+    background-image: linear-gradient(170deg, #272822 10%, #e63434b1 74%);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.modal-pixo{
+    height: 300px;
+    background-color: #272822;
+    background-image: linear-gradient(170deg, #272822 10%, #e63434b1 74%);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.button-theme {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-novecento-normal);
+    background: transparent;
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+    border: none;
+
+}
+
+.modal-theme>.header-theme {
+    font-family: var(--font-cc-ultimatum);
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+}
+
+.modal-pixo>.header-pixo {
+    font-family: var(--font-cc-ultimatum);
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-pixo >.pixo-img{
+    height: 200px;
+    width: 165px;
+    background: black no-repeat center /contain;
+    overflow: hidden;
+    animation: pixo-changeImage 10s infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes pixo-changeImage {
+    0% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433374/367996939_207937178924399_2885094949970343017_n_t17pk5.jpg);
+    }
+
+    25% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433374/337750926_795280374776471_7380077801040000389_n_d5d9oq.jpg);
+    }
+
+    50% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433374/376011026_855964046045917_3747617966464338871_n_aiz3pk.jpg);
+    }
+
+    75% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433374/353824943_275813008251518_4736197242434317902_n_ygyvoy.jpg);
+    }
+
+    100% {
+        background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1715433373/326444542_860609318556444_3290435243880202536_n_qmchu6.jpg);
+    }
+}
+
+.modal-theme>.content-theme{
+    font-family: var(--font-novecento-normal);
+    width: 100%;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.modal-pixo>.content-pixo{
+    font-family: var(--font-novecento-normal);
+    width: 100%;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.modal-theme>.close {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: black;
+    border: 1px solid #cfcece;
+}
+
+.modal-pixo>.close {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: black;
+    border: 1px solid #cfcece;
+}
+
 .landing-page {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black), url(bgimg.jpg) no-repeat center center/cover fixed;
     height: 100vh;
@@ -120,10 +255,12 @@
         background-image: url(https://res.cloudinary.com/duysea99p/image/upload/v1713299178/heshan-perera-aIJa8dPdzRI-unsplash_qqqmxl.jpg);
     }
 }
-.gap-btw-vid-img{
+
+.gap-btw-vid-img {
     height: 50px;
     background-color: black;
 }
+
 .video-section {
     padding-top: 51px;
     display: flex;
@@ -137,11 +274,11 @@
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     background-color: black;
 }
 
-.chrImg{
+.chrImg {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,6 +292,7 @@
     margin-right: 75px;
     margin-bottom: 100px;
 }
+
 .Cards {
     display: flex;
     justify-content: center;
@@ -294,7 +432,7 @@
     font-family: var(--font-novecento-normal);
 }
 
-.nameANIMATION{
+.nameANIMATION {
     margin-top: 150px;
     display: flex;
     justify-content: space-between;
@@ -304,11 +442,12 @@
     font-weight: bold;
 }
 
-.weWILL{
+.weWILL {
     position: static;
-    
+
 }
-.nameTYPE{
+
+.nameTYPE {
     margin-bottom: 2px;
     margin-left: 25px;
     color: black;
@@ -340,7 +479,7 @@
     background: url(https://res.cloudinary.com/duysea99p/image/upload/v1712850689/Pixonoids_-_Material_UI_-_Copy_lqfq2s.png) no-repeat center center / cover;
     position: fixed;
     margin: 7px;
-    margin-left:30px ;
+    margin-left: 30px;
     bottom: 10px;
     z-index: 100;
     animation: rotate 20s linear infinite;
@@ -413,7 +552,7 @@
     }
 
     .navbar-toggle {
-        margin:10px;
+        margin: 10px;
         display: block;
         float: right;
         width: 30px;
@@ -637,7 +776,7 @@
         font-family: var(--font-novecento-normal);
     }
 
-    .nameANIMATION{
+    .nameANIMATION {
         margin-top: 150px;
         display: flex;
         justify-content: space-between;
@@ -646,12 +785,13 @@
         font-weight: bold;
         font-size: 15px;
     }
-    
-    .weWILL{
+
+    .weWILL {
         position: static;
-        
+
     }
-    .nameTYPE{
+
+    .nameTYPE {
         margin-bottom: 2px;
         margin-left: 25px;
         color: black;

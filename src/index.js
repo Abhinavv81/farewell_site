@@ -46,12 +46,12 @@ const Nav = () => {
         inline: "nearest",
       });
     }
-    // Close the navbar after clicking a link
+    // Close the navbar ater clicking a link
     setIsOpen(false);
   };
 
   return (
-    <nav className={`nav-bar ${isOpen ? 'open' : ''}`}>
+    <nav className={`nav-bar ${isOpen ? "open" : ""}`}>
       <div className="links">
         <ul>
           <li>

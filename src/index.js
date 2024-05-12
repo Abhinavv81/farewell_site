@@ -21,23 +21,18 @@ function Main() {
 }
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const toggleButton = document.querySelector(".navbar-toggle");
-    const navbarLinks = document.querySelector(
-      ".links",
-      ".button-theme",
-      "button-pixo"
-    );
+    const navbarLinks = document.querySelector(".links");
 
     const handleClick = () => {
       navbarLinks.classList.toggle("show");
-      setIsOpen(!isOpen); // Toggle isOpen state
+      setIsOpen(!isOpen);
     };
 
     toggleButton.addEventListener("click", handleClick);
-
     return () => {
       toggleButton.removeEventListener("click", handleClick);
     };
@@ -55,23 +50,18 @@ const Nav = () => {
   };
 
   const handleLinkClick = () => {
-    const navbarLinks = document.querySelector(
-      ".links",
-      ".button-theme",
-      ".button-pixo"
-    );
+    const navbarLinks = document.querySelector(".links");
     navbarLinks.classList.remove("show");
     setIsOpen(false);
   };
 
   const isDesktopOrLaptop = useMediaQuery({ minWidth: 769 });
   const isTabletOrMobile = useMediaQuery({ maxWidth: 768 });
+  const [openTheme, setOpenTheme] = useState(false);
+  const [openPixo, setOpenPixo] = useState(false);
 
-  // const handlebuttonClick = () => {
-  //   const navbarbutton = document.querySelector(".button-theme");
-  //   navbarbutton.classList.remove("show");
-  //   setIsOpen(false);
-  // };
+  const closeModalTheme = () => setOpenTheme(false);
+  const closeModalPixo = () => setOpenPixo(false);
 
   return (
     <nav className="nav-bar">
@@ -111,14 +101,20 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#theme"
-              onClick={() => {
-                handleLinkClick();
-              }}
-            >
+            <>
+              <button
+                className="button-theme"
+                onClick={() => {
+                  handleLinkClick();
+                  setOpenTheme((o) => !o);
+                }}
+              >
+                Theme
+              </button>
               <Popup
-                trigger={<button className="button-theme">Theme</button>}
+                open={openTheme}
+                closeOnDocumentClick
+                onClose={closeModalTheme}
                 modal
               >
                 {(close) => (
@@ -145,7 +141,7 @@ const Nav = () => {
                   </div>
                 )}
               </Popup>
-            </a>
+            </>
           </li>
           <li>
             <>
@@ -186,40 +182,50 @@ const Nav = () => {
                 </Popup>
               )}
               {isTabletOrMobile && (
-                <Popup
-                trigger={<button className="button-theme">Pixonoids</button>}
-                modal
-              >
-                {(close) => (
-                  <div className="modal-pixo">
-                    <button className="close" onClick={close}>
-                      &times;
-                    </button>
-                    <div className="header-pixotab">
-                      PIXONOIDS
-                    </div>
-                    <div className="content-pixotab">
-                      <p>
-                        The Official Photography , Animation , Graphic
-                        Designing , Video Editing and Web Development Club of
-                        National Institute Of Technology Hamirpur
-                        <br />
-                        <br />
-                        "Art is that form of unique expression which traverses
-                        the boundaries of inner aspirations and ethereal
-                        world." From rustling leaves to pastel hues, bustling
-                        crowds to silent rooms, we at PIXONOIDS capture it
-                        all. PIXONOIDS is the core club of NIT-H, which is
-                        responsible for documentation of college events and
-                        fests, designing posters, making short films, and
-                        conceiving the official websites for our college
-                        fests.
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </Popup>
-
+                <>
+                  <button
+                    className="button-theme"
+                    onClick={() => {
+                      handleLinkClick();
+                      setOpenPixo((o) => !o);
+                    }}
+                  >
+                    Pixonoids
+                  </button>
+                  <Popup
+                    open={openPixo}
+                    closeOnDocumentClick
+                    onClose={closeModalPixo}
+                    modal
+                  >
+                    {(close) => (
+                      <div className="modal-pixo">
+                        <button className="close" onClick={close}>
+                          &times;
+                        </button>
+                        <div className="header-pixotab">PIXONOIDS</div>
+                        <div className="content-pixotab">
+                          <p>
+                            The Official Photography , Animation , Graphic
+                            Designing , Video Editing and Web Development Club
+                            of National Institute Of Technology Hamirpur
+                            <br />
+                            <br />
+                            "Art is that form of unique expression which
+                            traverses the boundaries of inner aspirations and
+                            ethereal world." From rustling leaves to pastel
+                            hues, bustling crowds to silent rooms, we at
+                            PIXONOIDS capture it all. PIXONOIDS is the core club
+                            of NIT-H, which is responsible for documentation of
+                            college events and fests, designing posters, making
+                            short films, and conceiving the official websites
+                            for our college fests.
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </Popup>
+                </>
               )}
             </>
           </li>

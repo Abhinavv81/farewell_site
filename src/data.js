@@ -14,7 +14,7 @@ const data = {
         deptName: "Web Development",
         kuchBaat:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         instaLink:"https://www.instagram.com/goyalpranjal_",
-        gitLink:"",
+        gitLink:"https://github.com/Pranjal7852",
     },
 
     kavya: {
@@ -23,7 +23,7 @@ const data = {
         deptName: "Web Development",
         kuchBaat:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         instaLink:"https://www.instagram.com/_ka.vy.a",
-        gitLink:"",
+        gitLink:"https://github.com/Kavya-25",
     },
 
     kshitijRoodkee: {
@@ -32,7 +32,7 @@ const data = {
         deptName: "Animation",
         kuchBaat:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         instaLink:"https://www.instagram.com/kshitij.washere",
-        gitLink:"",
+        gitLink:"https://github.com/horizenight",
     },
    
     bhanuPratap: {
@@ -122,7 +122,7 @@ const data = {
         deptName: "Animation",
         kuchBaat:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         instaLink:"https://www.instagram.com/arajshow_414",
-        gitLink:"",
+        gitLink:"https://github.com/arajshow",
     },
 
     kartikeySaini: {
@@ -140,7 +140,7 @@ const data = {
         deptName: "Graphic Designing",
         kuchBaat:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         instaLink:"https://www.instagram.com/tihom__37",
-        gitLink:"",
+        gitLink:"https://github.com/tihom4537",
     },
 
     shivaniKawade: {
@@ -149,7 +149,7 @@ const data = {
         deptName: "Graphic Designing",
         kuchBaat:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         instaLink:"https://www.instagram.com/shuttumaniiiij",
-        gitLink:"",
+        gitLink:"https://github.com/vaniiiiik",
     },
 
     yajatChaudhary: {
@@ -158,7 +158,7 @@ const data = {
         deptName: "Web Development",
         kuchBaat:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         instaLink:"https://www.instagram.com/yajatchaudhary",
-        gitLink:"",
+        gitLink:"https://github.com/YajatChaudhary",
     },
     
     kaushikGeyyer: {

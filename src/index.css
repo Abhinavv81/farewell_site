@@ -99,6 +99,7 @@
 
 .modal-theme>.header-theme {
     font-family: var(--font-cc-ultimatum);
+    color: aliceblue;
     width: 100%;
     font-size: 50px;
     text-align: center;
@@ -669,8 +670,8 @@
         position: absolute;
         top: -152px;
         left: 207px;
-        height: 384px;
-        width: 100.7px;
+        height: 400px;
+        width: 100px;
         border-radius: 37px;
         padding: 0px;
         z-index: 0;

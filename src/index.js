@@ -8,6 +8,7 @@ import { useRef } from "react";
 import Typewriter from "typewriter-effect";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+import CursorLine from "./CursorLine";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -15,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 function Main() {
   return (
     <body>
+      <CursorLine />
       <Background />
     </body>
   );

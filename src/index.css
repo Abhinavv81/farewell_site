@@ -273,7 +273,7 @@
 }
 
 .gap-btw-vid-img {
-    height: 50px;
+    height:150px;
     background-color: black;
 }
 
@@ -554,10 +554,11 @@
         margin-right: 13.5%;
         padding: 2.5%;
         width: 74%;
-        background: rgba(255, 255, 255, 0.09);
+        background: linear-gradient(to top, rgba(199, 185, 185, 0.394), rgba(175, 173, 173, 0.48)) ;
+        color: black;
+        box-shadow: rgb(117, 138, 167) 25px 25px 50px -30px;
         border-radius: 12px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(0px);
+        backdrop-filter: blur(2.5px);
 
     }
 
@@ -568,7 +569,7 @@
     }
 
     .navbar-toggle {
-        margin: 10px;
+        margin: 7px;
         display: block;
         float: right;
         width: 30px;
@@ -581,7 +582,7 @@
     .links a {
         font-size: var(--font-size-xl);
         text-decoration: none;
-        color: white;
+        color: black;
         font-weight: bolder;
     }
 
@@ -879,7 +880,7 @@
     .button-theme {
         cursor: pointer;
         text-decoration: none;
-        color: white;
+        color: black;
         font-family: var(--font-novecento-normal);
         background: transparent;
         font-size: large;

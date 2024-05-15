@@ -9,6 +9,8 @@ import Typewriter from "typewriter-effect";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import CursorLine from "./CursorLine";
+import PixonoidsEffect from "./pixonoidsEffect";
+import FarewellEffect from "./farewellEffect";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -148,7 +150,7 @@ const Nav = () => {
             <>
               {isDesktopOrLaptop && (
                 <>
-                <CursorLine/>
+                  <CursorLine />
                   <Popup
                     trigger={
                       <button className="button-theme">Pixonoids</button>
@@ -305,12 +307,10 @@ const Background = () => {
       <div className="landing-page">
         <Nav />
         <div className="landing-text">
-          <span id="pixonoids-text" ref={heading}>
-            Pixonoids
-          </span>
-          <span id="farewell-text" ref={subheading}>
-            Farewell 2K24
-          </span>
+          <PixonoidsEffect />
+          <FarewellEffect/>
+          <span id="pixonoids-text" ref={heading}></span>
+          <span id="farewell-text" ref={subheading}></span>
         </div>
       </div>
       <div className="image-section" id="Images"></div>

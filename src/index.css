@@ -54,7 +54,7 @@
 }
 
 
-.modal-theme{
+.modal-theme {
     height: 300px;
     background-color: #272822;
     background-image: linear-gradient(170deg, #272822 10%, #e63434b1 74%);
@@ -62,7 +62,8 @@
     display: flex;
     flex-direction: column;
 }
-.modal-pixo{
+
+.modal-pixo {
     height: 300px;
     background-color: #272822;
     background-image: linear-gradient(170deg, #272822 10%, #e63434b1 74%);
@@ -109,7 +110,7 @@
 
 .modal-pixo>.header-pixo {
     font-family: var(--font-cc-ultimatum);
-    color:aliceblue;
+    color: aliceblue;
     width: 100%;
     font-size: 50px;
     text-align: center;
@@ -121,7 +122,7 @@
     margin-left: -55px;
 }
 
-.header-pixo >.pixo-img{
+.header-pixo>.pixo-img {
     height: 200px;
     width: 165px;
     background: black no-repeat center /contain;
@@ -152,7 +153,7 @@
     }
 }
 
-.modal-theme>.content-theme{
+.modal-theme>.content-theme {
     font-family: var(--font-novecento-normal);
     width: 100%;
     font-size: 14px;
@@ -163,7 +164,8 @@
     display: flex;
     justify-content: center;
 }
-.modal-pixo>.content-pixo{
+
+.modal-pixo>.content-pixo {
     font-family: var(--font-novecento-normal);
     width: 100%;
     font-size: 13px;
@@ -225,6 +227,7 @@
     flex-direction: column;
 }
 
+
 .landing-text #pixonoids-text {
     font-size: 110px;
     font-family: var(--font-cc-ultimatum);
@@ -273,7 +276,7 @@
 }
 
 .gap-btw-vid-img {
-    height:150px;
+    height: 150px;
     background-color: black;
 }
 
@@ -554,7 +557,7 @@
         margin-right: 13.5%;
         padding: 2.5%;
         width: 74%;
-        background: linear-gradient(to top, rgba(199, 185, 185, 0.394), rgba(175, 173, 173, 0.48)) ;
+        background: linear-gradient(to top, rgba(199, 185, 185, 0.394), rgba(175, 173, 173, 0.48));
         color: black;
         box-shadow: rgb(117, 138, 167) 25px 25px 50px -30px;
         border-radius: 12px;
@@ -860,7 +863,7 @@
     }
 
 
-    .modal-theme{
+    .modal-theme {
         height: 290px;
         background-color: #272822;
         background-image: linear-gradient(170deg, #272822 10%, #e63434b1 74%);
@@ -868,7 +871,8 @@
         display: flex;
         flex-direction: column;
     }
-    .modal-pixo{
+
+    .modal-pixo {
         height: 290px;
         background-color: #272822;
         background-image: linear-gradient(170deg, #272822 10%, #e63434b1 74%);
@@ -876,7 +880,7 @@
         display: flex;
         flex-direction: column;
     }
-    
+
     .button-theme {
         cursor: pointer;
         text-decoration: none;
@@ -887,9 +891,9 @@
         font-weight: bolder;
         text-align: center;
         border: none;
-    
+
     }
-    
+
     .modal-theme>.header-theme {
         color: aliceblue;
         font-family: var(--font-cc-ultimatum);
@@ -899,7 +903,7 @@
         font-weight: 500;
         border-bottom: 1px solid black;
     }
-    
+
     .modal-pixo>.header-pixotab {
         color: aliceblue;
         font-family: var(--font-cc-ultimatum);
@@ -909,8 +913,8 @@
         text-align: center;
         border-bottom: 1px solid black;
     }
-    
-    .modal-theme>.content-theme{
+
+    .modal-theme>.content-theme {
         font-family: var(--font-novecento-normal);
         width: 100%;
         font-size: 9px;
@@ -921,7 +925,8 @@
         display: flex;
         justify-content: center;
     }
-    .modal-pixo>.content-pixotab{
+
+    .modal-pixo>.content-pixotab {
         font-family: var(--font-novecento-normal);
         width: 100%;
         font-size: 9px;
@@ -933,7 +938,7 @@
         display: flex;
         justify-content: center;
     }
-    
+
     .modal-theme>.close {
         color: white;
         cursor: pointer;
@@ -947,7 +952,7 @@
         background: black;
         border: 1px solid #cfcece;
     }
-    
+
     .modal-pixo>.close {
         color: white;
         cursor: pointer;

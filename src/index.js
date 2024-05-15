@@ -150,7 +150,7 @@ const Nav = () => {
             <>
               {isDesktopOrLaptop && (
                 <>
-                  {/* <CursorLine /> */}
+                  <CursorLine />
                   <Popup
                     trigger={
                       <button className="button-theme">Pixonoids</button>

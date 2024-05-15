@@ -226,7 +226,9 @@
     align-items: center;
     flex-direction: column;
 }
-
+span{
+    display: inline-block;
+}
 
 .landing-text #pixonoids-text {
     font-size: 110px;

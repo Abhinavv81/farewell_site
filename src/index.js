@@ -307,7 +307,6 @@ const Background = () => {
         <Nav />
         <div className="landing-text">
           <PixonoidsEffect />
-          <FarewellEffect/>
           <span id="pixonoids-text" ref={heading}></span>
           <span id="farewell-text" ref={subheading}></span>
         </div>

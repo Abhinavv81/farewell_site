@@ -1,8 +1,12 @@
 import { motion, useAnimationControls } from "framer-motion";
 import { useState } from "react";
+import "./index.css";
+import "./global.css";
+
 const TextSpan = ({ children }) => {
   const controls = useAnimationControls();
   const [isPlaying, setIsPlaying] = useState(false);
+
   const rubberBand = () => {
     controls.start({
       transform: [
@@ -14,7 +18,7 @@ const TextSpan = ({ children }) => {
         "scale3d(1,1,1)",
       ],
       transition: {
-        times: [0, 0.4, 0.6, 0.8, 0.9],
+        times: [0, 0.2, 0.4, 0.6, 0.8, 1],
       },
     });
     setIsPlaying(true);
@@ -28,10 +32,11 @@ const TextSpan = ({ children }) => {
           rubberBand();
         }
       }}
-      onAnimationComplete={setIsPlaying(false)}
+      onAnimationComplete={() => setIsPlaying(false)}
     >
       {children}
     </motion.span>
   );
 };
+
 export default TextSpan;

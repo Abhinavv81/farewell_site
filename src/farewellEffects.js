@@ -3,17 +3,17 @@ import TextSpan from "./TextSpan";
 import "./index.css";
 import "./global.css";
 
-function PixonoidsEffect() {
-    const sentence = "Pixonoids".split("");
+function FarewellEffect() {
+    const sentence = "farewell 2K24".split("");
     return (
-        <div id="pixonoids-text">
+        <div id="farewell-text">
             {sentence.map((letter, index) => (
                 <TextSpan key={index}>
-                    {letter}
+                    {letter ===" " ? "\u00A0" : letter}
                 </TextSpan>
             ))}
         </div>
     );
 }
 
-export default PixonoidsEffect;
+export default FarewellEffect;

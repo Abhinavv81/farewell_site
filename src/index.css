@@ -226,11 +226,12 @@
     align-items: center;
     flex-direction: column;
 }
-span{
+
+span {
     display: inline-block;
 }
 
-.landing-text #pixonoids-text {
+#pixonoids-text {
     font-size: 110px;
     font-family: var(--font-cc-ultimatum);
     text-transform: uppercase;

@@ -12,6 +12,7 @@ import CursorLine from "./CursorLine";
 import PixonoidsEffect from "./pixonoidsEffect";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import FarewellEffect from "./farewellEffects";
 gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
@@ -149,7 +150,7 @@ const Nav = () => {
             <>
               {isDesktopOrLaptop && (
                 <>
-                  <CursorLine />
+                  {/* <CursorLine /> */}
                   <Popup
                     trigger={
                       <button className="button-theme">Pixonoids</button>
@@ -305,10 +306,14 @@ const Background = () => {
     <>
       <div className="landing-page">
         <Nav />
+
         <div className="landing-text">
-          <PixonoidsEffect />
-          <span id="pixonoids-text" ref={heading}></span>
-          <span id="farewell-text" ref={subheading}></span>
+          <span id="pixonoids-text" ref={heading}>
+            <PixonoidsEffect />
+          </span>
+          <span id="farewell-text" ref={subheading}>
+            <FarewellEffect />
+          </span>
         </div>
       </div>
       <div className="image-section" id="Images"></div>

@@ -10,7 +10,6 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import CursorLine from "./CursorLine";
 import PixonoidsEffect from "./pixonoidsEffect";
-import FarewellEffect from "./farewellEffect";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);

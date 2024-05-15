@@ -16,7 +16,6 @@ gsap.registerPlugin(ScrollTrigger);
 function Main() {
   return (
     <body>
-      <CursorLine />
       <Background />
     </body>
   );
@@ -148,40 +147,45 @@ const Nav = () => {
           <li>
             <>
               {isDesktopOrLaptop && (
-                <Popup
-                  trigger={<button className="button-theme">Pixonoids</button>}
-                  modal
-                >
-                  {(close) => (
-                    <div className="modal-pixo">
-                      <button className="close" onClick={close}>
-                        &times;
-                      </button>
-                      <div className="header-pixo">
-                        PIXONOIDS
-                        <div className="pixo-img"></div>
+                <>
+                <CursorLine/>
+                  <Popup
+                    trigger={
+                      <button className="button-theme">Pixonoids</button>
+                    }
+                    modal
+                  >
+                    {(close) => (
+                      <div className="modal-pixo">
+                        <button className="close" onClick={close}>
+                          &times;
+                        </button>
+                        <div className="header-pixo">
+                          PIXONOIDS
+                          <div className="pixo-img"></div>
+                        </div>
+                        <div className="content-pixo">
+                          <p>
+                            The Official Photography , Animation , Graphic
+                            Designing , Video Editing and Web Development Club
+                            of National Institute Of Technology Hamirpur
+                            <br />
+                            <br />
+                            "Art is that form of unique expression which
+                            traverses the boundaries of inner aspirations and
+                            ethereal world." From rustling leaves to pastel
+                            hues, bustling crowds to silent rooms, we at
+                            PIXONOIDS capture it all. PIXONOIDS is the core club
+                            of NIT-H, which is responsible for documentation of
+                            college events and fests, designing posters, making
+                            short films, and conceiving the official websites
+                            for our college fests.
+                          </p>
+                        </div>
                       </div>
-                      <div className="content-pixo">
-                        <p>
-                          The Official Photography , Animation , Graphic
-                          Designing , Video Editing and Web Development Club of
-                          National Institute Of Technology Hamirpur
-                          <br />
-                          <br />
-                          "Art is that form of unique expression which traverses
-                          the boundaries of inner aspirations and ethereal
-                          world." From rustling leaves to pastel hues, bustling
-                          crowds to silent rooms, we at PIXONOIDS capture it
-                          all. PIXONOIDS is the core club of NIT-H, which is
-                          responsible for documentation of college events and
-                          fests, designing posters, making short films, and
-                          conceiving the official websites for our college
-                          fests.
-                        </p>
-                      </div>
-                    </div>
-                  )}
-                </Popup>
+                    )}
+                  </Popup>
+                </>
               )}
               {isTabletOrMobile && (
                 <>
